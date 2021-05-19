@@ -21,7 +21,17 @@
 			play = confirm("Do you want to play?");
 			if(play == true){
 				name = prompt("What's your name?", "Shinobu");
-				writeText(name);
+				writeText(“Wake up, “ + name);
+				writeText("Follow the yellow brick road.");
+				writeText("Knock, knock, "+name);
+				document.getElementById("input").focus();			
+				document.getElementById("input").select();
+				document.body.addEventListener( 'keyup', function (e) {
+					if ( e.keyCode == 13 ) {
+						inputValue = document.getElementById('input').value;
+						writeText(inputValue);						
+						document.getElementById('input').value = '';
+
 				}
 			}
 			function writeText(name){
