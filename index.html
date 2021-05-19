@@ -22,7 +22,7 @@
 			if(play == true){
 				name = prompt("What's your name?", "Shinobu");
 				writeText(“Wake up, “ + name);
-				writeText("Follow the yellow brick road.");
+				writeText("Follow the yellow brick road ");
 				writeText("Knock, knock, "+name);
 				document.getElementById("input").focus();			
 				document.getElementById("input").select();
@@ -33,6 +33,8 @@
 						document.getElementById('input').value = '';
 
 				}
+			});
+			}
 			}
 			function writeText(name){
 				document.getElementById("log").innerHTML =
